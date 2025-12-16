@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block title %}
+{% endblock %}
+
+{% block countent %}
+
+<h1>{{ title }}</h1>
+  <hr>
+<h2>รายการกีฬาที่ฉันโปรดปราน</h2>
+  <ol>
+    <li>{{ movies[0] }}</li>
+    <li>{{ movies[1] }}</li>
+    <li>{{ movies[2] }}</li>
+    <li>{{ movies[3] }}</li>
+    <li>{{ movies[4] }}</li>
+  </ol>
+<h2>รายการกีฬาที่ฉันโปรดปราน (for loop)</h2>
+  <ol>
+    {% for movie in movies %}
+      <li><h3>{{ movie }}</h3></li>
+    {% endfor %}
+  </ol>
+
+{% endblock %}
